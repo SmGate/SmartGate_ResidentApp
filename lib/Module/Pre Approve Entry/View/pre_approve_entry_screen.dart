@@ -56,6 +56,14 @@ class PreApproveEntryScreen extends GetView {
                               pagingController: controller.pagingController,
                               addAutomaticKeepAlives: false,
                               builderDelegate: PagedChildBuilderDelegate(
+                                firstPageProgressIndicatorBuilder: (context){
+                          return Padding(
+                            padding: EdgeInsets.only(
+    top: 10.h, 
+  ),
+                            child: Center(child: CircularProgressIndicator(color: primaryColor)),
+                          );
+                         },
                                 noItemsFoundIndicatorBuilder: (context) {
                                   return EmptyList(
                                     name: 'No Entry Yet',

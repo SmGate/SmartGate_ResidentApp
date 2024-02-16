@@ -638,11 +638,12 @@ class HomeScreen extends GetView {
             ),
             bottomNavigationBar: SizedBox(
               width: 375.w,
-              height: 90.w,
+               height: 105.h,
               child: BottomAppBar(
                 shape: CircularNotchedRectangle(),
                 notchMargin: 12.0,
                 child: Row(
+                  
                   children: [
                     20.w.pw,
                     HomeBottomAppBarIcon(

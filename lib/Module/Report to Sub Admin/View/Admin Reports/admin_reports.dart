@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -39,56 +41,66 @@ class AdminReports extends GetView {
                   ),
                   32.h.ph,
                   Expanded(
-                    child: PagedListView(
-                      shrinkWrap: true,
-                      primary: false,
-                      pagingController: controller.pagingController,
-                      addAutomaticKeepAlives: false,
-                      builderDelegate: PagedChildBuilderDelegate(
-                        noItemsFoundIndicatorBuilder: (context) {
-                          return EmptyList(
-                            name: 'No Complains',
-                          );
-                        },
-                        itemBuilder: (context, item, index) {
-                          final Reports reports = item as Reports;
-
-                          return GestureDetector(
-                              onTap: () {
-                                showDialog(
-                                    context: context,
-                                    builder: (BuildContext context) =>
-                                        AlertDialog(
-                                          content: ComplaintDialog(
-                                            userId: reports.userid,
-                                            statusDescription:
-                                                reports.statusdescription,
-                                            status: reports.status,
-                                            index: index,
-                                            id: reports.id,
-                                            controller: controller,
-                                            title: reports.title,
-                                            description: reports.description,
-                                            updatedAt: reports.updatedAt,
-                                            createdAt: reports.createdAt,
-                                            dialogTitle: 'Complaint',
-                                          ),
-                                        ));
-                              },
-                              child: ComplainCard(
-                                index: index,
-                                controller: controller,
-                                id: reports.id,
-                                title: reports.title,
-                                description: reports.description,
-                                userId: reports.userid,
-                                subAdminId: reports.subadminid,
-                                createdAt: reports.createdAt,
-                                status: reports.status,
-                                statusDescription: reports.statusdescription,
-                                updatedAat: reports.updatedAt,
-                              ));
-                        },
+                    child: Center(
+                      child: PagedListView(
+                        shrinkWrap: true,
+                        primary: false,
+                        pagingController: controller.pagingController,
+                        addAutomaticKeepAlives: false,
+                        builderDelegate: PagedChildBuilderDelegate(
+                         firstPageProgressIndicatorBuilder: (context){
+                          return Center(child: CircularProgressIndicator(color: primaryColor));
+                         },
+                         newPageProgressIndicatorBuilder:  (context){
+                          return Center(child: CircularProgressIndicator(color: primaryColor));
+                         },
+                          noItemsFoundIndicatorBuilder: (context) {
+                            return EmptyList(
+                              name: 'No Complains',
+                            );
+                          },
+                          itemBuilder: (context, item, index) {
+                            final Reports reports = item as Reports;
+                      
+                            return GestureDetector(
+                                onTap: () {
+                                  showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) =>
+                                          AlertDialog(
+                                            content: ComplaintDialog(
+                                              userId: reports.userid,
+                                              statusDescription:
+                                                  reports.statusdescription,
+                                              status: reports.status,
+                                              index: index,
+                                              id: reports.id,
+                                              controller: controller,
+                                              title: reports.title,
+                                              description: reports.description,
+                                              updatedAt: reports.updatedAt,
+                                              createdAt: reports.createdAt,
+                                              dialogTitle: 'Complaint',
+                                            ),
+                                          ));
+                                },
+                                child: ComplainCard(
+                                  index: index,
+                                  controller: controller,
+                                  id: reports.id,
+                                  title: reports.title,
+                                  description: reports.description,
+                                  userId: reports.userid,
+                                  subAdminId: reports.subadminid,
+                                  createdAt: reports.createdAt,
+                                  status: reports.status,
+                                  statusDescription: reports.statusdescription,
+                                  updatedAat: reports.updatedAt,
+                                ));
+                          },
+                       
+                        ),
+                        
                       ),
                     ),
                   ),
@@ -246,7 +258,7 @@ class ComplaintDialog extends StatelessWidget {
               ),
               11.w.pw,
               Text(
-                DateHelper.formatDate(updatedAt!) ?? "",
+                DateHelper.formatDate(updatedAt!) ,
                 style: GoogleFonts.ubuntu(
                     color: HexColor(
                       '#4D4D4D',
@@ -263,7 +275,7 @@ class ComplaintDialog extends StatelessWidget {
               ),
               11.w.pw,
               Text(
-                DateHelper.convertTo12HourFormatFromTimeStamp(updatedAt!) ?? "",
+                DateHelper.convertTo12HourFormatFromTimeStamp(updatedAt!),
                 style: GoogleFonts.ubuntu(
                     color: HexColor(
                       '#4D4D4D',
@@ -326,12 +338,14 @@ class ComplaintDialog extends StatelessWidget {
                           width: 80.w,
                           height: 25.w,
                           child: controller.isSolved
-                              ? CircularProgressIndicator()
+                              ? Center(child: CircularProgressIndicator())
                               : Center(
                                   child: Text(
                                     'Yes',
                                     style: GoogleFonts.ubuntu(
-                                      color: HexColor(
+                                      color:
+                                      
+                                       HexColor(
                                         '#FFFFFF',
                                       ),
                                       fontSize: 14.sp,

@@ -63,6 +63,7 @@ class NotificationServices {
             priority: Priority.high,
             ticker: 'ticker');
 
+             // iOS Configuration
     NotificationDetails notificationDetails =
         NotificationDetails(android: androidNotificationDetails);
 

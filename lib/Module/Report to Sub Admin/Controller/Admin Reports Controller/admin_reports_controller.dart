@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:get/get.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:userapp/Constants/constants.dart';
@@ -94,7 +96,7 @@ class AdminReportsController extends GetxController {
     dataList = await adminReportsApi(
         userid: user.userId!, token: user.bearerToken!, pageKey: pageKey);
 
-    final isLastPage = dataList!.length < pageSize;
+    final isLastPage = dataList.length < pageSize;
     if (isLastPage) {
       pagingController.appendLastPage(dataList);
     } else {

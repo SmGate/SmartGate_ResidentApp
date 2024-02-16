@@ -43,6 +43,12 @@ class ReportsHistoryScreen extends GetView {
                           pagingController: controller.pagingController,
                           addAutomaticKeepAlives: false,
                           builderDelegate: PagedChildBuilderDelegate(
+                              firstPageProgressIndicatorBuilder: (context){
+                          return Center(child: CircularProgressIndicator(color: primaryColor));
+                         },
+                         newPageProgressIndicatorBuilder:  (context){
+                          return Center(child: CircularProgressIndicator(color: primaryColor));
+                         },
                             noItemsFoundIndicatorBuilder: (context) {
                               return EmptyList(
                                 name: 'No History',

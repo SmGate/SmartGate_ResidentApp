@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -43,6 +45,12 @@ class GuestsHistoryScreen extends GetView {
                         pagingController: controller.pagingController,
                         addAutomaticKeepAlives: false,
                         builderDelegate: PagedChildBuilderDelegate(
+                            firstPageProgressIndicatorBuilder: (context){
+                          return Center(child: CircularProgressIndicator(color: primaryColor));
+                         },
+                         newPageProgressIndicatorBuilder:  (context){
+                          return Center(child: CircularProgressIndicator(color: primaryColor));
+                         },
                             noItemsFoundIndicatorBuilder: (context) {
                           return EmptyList(
                             name: 'No History',
@@ -92,7 +100,7 @@ class GuestsHistoryScreen extends GetView {
       padding: EdgeInsets.fromLTRB(16.w, 13.h, 16.w, 0),
       child: SizedBox(
           width: 343.w,
-          height: 67.w,
+         // height: 67.w,
           child: Card(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),

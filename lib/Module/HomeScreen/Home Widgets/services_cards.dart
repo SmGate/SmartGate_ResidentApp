@@ -25,7 +25,7 @@ class ServiceCards extends StatelessWidget {
       onTap: onTap,
       child: SizedBox(
         width: 145.63.w,
-        height: 117.w,
+       // height: 117.w,
         child: Card(
           child: Column(
             children: [
@@ -39,7 +39,7 @@ class ServiceCards extends StatelessWidget {
                 ),
                 child: Center(
                   child: SvgPicture.asset(
-                    iconPath!.trim().toString()!,
+                    iconPath!.trim().toString(),
                     width: 36.w,
                     // height: 33.67.w,
                   ),
@@ -74,6 +74,7 @@ class ServiceCards extends StatelessWidget {
                     fontSize: 8.sp,
                     color: HexColor('#8A8A8A')),
               ),
+               12.h.ph,
             ],
           ),
           //elevation: 1.6,
