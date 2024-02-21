@@ -1,7 +1,8 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-
 import '../../../Constants/constants.dart';
 import '../../../Routes/set_routes.dart';
 import '../../../Widgets/Emergency Card/emergency_card.dart';

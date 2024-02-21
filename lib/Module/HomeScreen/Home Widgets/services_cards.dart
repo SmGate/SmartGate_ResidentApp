@@ -25,8 +25,9 @@ class ServiceCards extends StatelessWidget {
       onTap: onTap,
       child: SizedBox(
         width: 145.63.w,
-       // height: 117.w,
+     
         child: Card(
+     
           child: Column(
             children: [
               12.h.ph,
@@ -44,15 +45,7 @@ class ServiceCards extends StatelessWidget {
                     // height: 33.67.w,
                   ),
                 ),
-                // decoration: BoxDecoration(
-                //     shape: BoxShape.circle,
-                //     gradient: LinearGradient(
-                //         colors: [
-                //           Color(0xffFFFFFF).withOpacity(0.2),
-                //           Color(0xffFF9900).withOpacity(0.7),
-                //         ],
-                //         begin: Alignment.topCenter,
-                //         end: Alignment.bottomCenter)),
+              
               ),
               10.h.ph,
               Text(

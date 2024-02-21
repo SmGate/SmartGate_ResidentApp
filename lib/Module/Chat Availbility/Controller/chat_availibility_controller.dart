@@ -23,7 +23,7 @@ class ChatAvailbilityController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
+    
     super.onInit();
 
     userdata = data[0];
@@ -118,6 +118,7 @@ class ChatAvailbilityController extends GetxController {
     } catch (e) {
       myToast(msg: "Something went wrong ${e.toString()}", isNegative: true);
     }
+    return null;
   }
 
   Future<String?> checkChatVisibilityApi({
@@ -160,5 +161,6 @@ class ChatAvailbilityController extends GetxController {
     } catch (e) {
       myToast(msg: "Something went wrong ${e.toString()}", isNegative: true);
     }
+    return null;
   }
 }

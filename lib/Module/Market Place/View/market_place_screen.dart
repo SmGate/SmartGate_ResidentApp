@@ -204,8 +204,10 @@ class MarketPlaceScreen extends GetView {
                               );
                             });
                           } else {
-                            return EmptyList(
-                              name: 'No Items Found',
+                            return Center(
+                              child: EmptyList(
+                                name: 'No Items Found',
+                              ),
                             );
                           }
                         } else if (snapshot.hasError) {

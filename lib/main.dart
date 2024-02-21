@@ -12,6 +12,8 @@ import 'package:get/get.dart';
 import 'package:userapp/Routes/routes_management.dart';
 import 'package:userapp/Routes/set_routes.dart';
 
+
+
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
@@ -30,7 +32,7 @@ main() async {
             messagingSenderId: "1085340446333",
             projectId: "smart-ga"));
   } else{
-      await Firebase.initializeApp();
+       await Firebase.initializeApp();
     }
  
   
@@ -68,6 +70,7 @@ class _MyAppState extends State<MyApp> {
         designSize: Size(375, 812),
         builder: (context, child) {
           return GetMaterialApp(
+         
             title: 'Smart Gate',
             debugShowCheckedModeBanner: false,
             initialRoute: splashscreen,
@@ -77,10 +80,4 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-// class MyHttpOverrides extends HttpOverrides {
-//   @override
-//   HttpClient createHttpClient(SecurityContext? context) {
-//     return super.createHttpClient(context)
-//       ..badCertificateCallback =
-//           (X509Certificate cert, String host, int port) => true;
-//   }
+

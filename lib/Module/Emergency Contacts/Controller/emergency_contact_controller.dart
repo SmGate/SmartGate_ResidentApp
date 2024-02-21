@@ -13,7 +13,6 @@ class EmergencyContactController extends GetxController {
   Uri? uri;
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
     userdata = this.user;
 

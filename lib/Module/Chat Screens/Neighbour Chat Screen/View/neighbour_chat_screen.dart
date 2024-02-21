@@ -160,9 +160,11 @@ class NeighbourChatScreen extends GetView {
                                 var data = snapshot.data!.docs;
 
                                 if (data.length == 0) {
-                                  return EmptyList(
-                                      name:
-                                          "Chat away! Your conversation starts here.. 😊 .");
+                                  return Center(
+                                    child: EmptyList(
+                                        name:
+                                            "Chat away! Your conversation starts here.. 😊 ."),
+                                  );
                                 }
                                 return ListView.builder(
                                   reverse: true,

@@ -1,12 +1,12 @@
-import 'dart:io';
+// ignore_for_file: deprecated_member_use
 
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:userapp/Routes/set_routes.dart';
-
 import '../../../../Constants/constants.dart';
 import '../../../../Helpers/Validation Helper/validation_helper.dart';
 import '../../../../Widgets/My Button/my_button.dart';
@@ -15,8 +15,7 @@ import '../../../../Widgets/My TextForm Field/my_textform_field.dart';
 import '../Controller/resident_personal_detail_controller.dart';
 
 class ResidentPersonalDetail extends GetView {
-  // final ResidentPersonalDetailController controller =
-  //     Get.put(ResidentPersonalDetailController());
+ 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(

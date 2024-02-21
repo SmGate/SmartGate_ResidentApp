@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -44,14 +46,20 @@ class ReportsHistoryScreen extends GetView {
                           addAutomaticKeepAlives: false,
                           builderDelegate: PagedChildBuilderDelegate(
                               firstPageProgressIndicatorBuilder: (context){
-                          return Center(child: CircularProgressIndicator(color: primaryColor));
+                          return Center(child: Padding(
+                            padding: const EdgeInsets.only(top: 300),
+                            child: CircularProgressIndicator(color: primaryColor),
+                          ));
                          },
                          newPageProgressIndicatorBuilder:  (context){
                           return Center(child: CircularProgressIndicator(color: primaryColor));
                          },
                             noItemsFoundIndicatorBuilder: (context) {
-                              return EmptyList(
-                                name: 'No History',
+                              return Padding(
+                               padding: const EdgeInsets.only(top: 300),
+                                child: EmptyList(
+                                  name: 'No History',
+                                ),
                               );
                             },
                             itemBuilder: (context, item, index) {

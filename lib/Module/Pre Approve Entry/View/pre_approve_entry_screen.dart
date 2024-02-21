@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -56,17 +58,25 @@ class PreApproveEntryScreen extends GetView {
                               pagingController: controller.pagingController,
                               addAutomaticKeepAlives: false,
                               builderDelegate: PagedChildBuilderDelegate(
-                                firstPageProgressIndicatorBuilder: (context){
-                          return Padding(
-                            padding: EdgeInsets.only(
-    top: 10.h, 
-  ),
-                            child: Center(child: CircularProgressIndicator(color: primaryColor)),
-                          );
+                                firstPageProgressIndicatorBuilder: (context) {
+                                  return Center(
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 300),
+                                      child: CircularProgressIndicator(
+                                          color: primaryColor),
+                                    ),
+                                  );
+                                },
+
+                                 newPageProgressIndicatorBuilder:  (context){
+                          return CircularProgressIndicator(color: primaryColor);
                          },
                                 noItemsFoundIndicatorBuilder: (context) {
-                                  return EmptyList(
-                                    name: 'No Entry Yet',
+                                  return Padding(
+                                    padding: const EdgeInsets.only(top: 300),
+                                    child: EmptyList(
+                                      name: 'No Entry Yet',
+                                    ),
                                   );
                                 },
                                 itemBuilder: (context, item, index) {

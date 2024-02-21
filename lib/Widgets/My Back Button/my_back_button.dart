@@ -25,7 +25,7 @@ class MyBackButton extends StatelessWidget {
         padding: EdgeInsets.only(top: 10.h),
         child: Row(
           children: [
-            15.w.pw,
+            // 15.w.pw,
             IconButton(
               icon: Icon(
                 Icons.arrow_back,
@@ -37,7 +37,7 @@ class MyBackButton extends StatelessWidget {
                     Get.back();
                   },
             ),
-            15.w.pw,
+             10.w.pw,
             Text(
               text ?? "",
               style: GoogleFonts.ubuntu(

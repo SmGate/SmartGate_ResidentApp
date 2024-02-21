@@ -295,7 +295,7 @@ class EventDialog extends StatelessWidget {
               ),
               11.w.pw,
               Text(
-                DateHelper.formatTimeToAMPM(endTime!) ?? "",
+                DateHelper.formatTimeToAMPM(endTime!) ,
                 style: GoogleFonts.ubuntu(
                     color: HexColor(
                       '#4D4D4D',

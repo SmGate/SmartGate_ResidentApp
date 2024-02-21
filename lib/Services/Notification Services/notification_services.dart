@@ -41,7 +41,7 @@ class NotificationServices {
   fireBaseInit() {
     FirebaseMessaging.onMessage.listen((message) {
       initFlutterNotificationPlugin(message);
-      showNotificationFlutter(message);
+      handleMessages(message);
     });
   }
 
@@ -96,7 +96,7 @@ class NotificationServices {
 
   Future<String?> getDeviceToken() async {
     String? deviceToken = await firebaseMessaging.getToken();
-
+    print(" device token is $deviceToken");
     return deviceToken;
   }
 

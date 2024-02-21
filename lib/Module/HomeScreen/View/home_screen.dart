@@ -112,7 +112,7 @@ class HomeScreen extends GetView {
                                     children: [
                                       Expanded(
                                         child: Text(
-                                            "Welcome Home, ${homeScreenController?.user.firstName} ${homeScreenController?.user.lastName} ",
+                                            "Welcome Home, ${homeScreenController.user.firstName} ${homeScreenController.user.lastName} ",
                                             maxLines: 2,
                                             style: GoogleFonts.ubuntu(
                                                 fontSize: 22.sp,
@@ -638,14 +638,14 @@ class HomeScreen extends GetView {
             ),
             bottomNavigationBar: SizedBox(
               width: 375.w,
-               height: 105.h,
+         height: 100.h,
               child: BottomAppBar(
                 shape: CircularNotchedRectangle(),
                 notchMargin: 12.0,
                 child: Row(
                   
                   children: [
-                    20.w.pw,
+                  //  20.w.pw,
                     HomeBottomAppBarIcon(
                       text: 'Home',
                       icon: IconlyBold.home,
@@ -733,7 +733,7 @@ class HomeScreen extends GetView {
                     ),
                     30.5.w.pw,
                     HomeBottomAppBarIcon(
-                      text: 'Discussion\nForum',
+                      text: 'Discussion',
                       icon: IconlyBold.chat,
                       onPressed: () async {
                         homeScreenController.onItemTapped(3);
@@ -767,7 +767,7 @@ class HomeScreen extends GetView {
                           ? primaryColor
                           : Colors.grey,
                     ),
-                    20.w.pw,
+                  //  20.w.pw,
                   ],
                 ),
               ),

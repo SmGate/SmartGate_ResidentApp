@@ -22,7 +22,7 @@ import '../Model/residents.dart';
 class HomeScreenController extends GetxController {
   @override
   void dispose() {
-    // TODO: implement dispose
+   
     super.dispose();
     userNameController.dispose();
     pageController.dispose();
@@ -158,8 +158,7 @@ class HomeScreenController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement
-
+   
     super.onInit();
 
     quickActions.add(QuickActions(

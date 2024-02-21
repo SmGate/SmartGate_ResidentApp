@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -197,8 +199,7 @@ class ChatAvailbilityScreen extends StatelessWidget {
                                                                           text:
                                                                               'Property Type'),
                                                                       DialogBoxText(
-                                                                        text: snapshot.data!.data[index].propertytype.toString() ??
-                                                                            "",
+                                                                        text: snapshot.data!.data[index].propertytype.toString() ,
                                                                       ),
                                                                       23.33
                                                                           .h
@@ -207,8 +208,7 @@ class ChatAvailbilityScreen extends StatelessWidget {
                                                                           text:
                                                                               'Role'),
                                                                       DialogBoxText(
-                                                                        text: snapshot.data!.data[index].rolename.toString() ??
-                                                                            "",
+                                                                        text: snapshot.data!.data[index].rolename.toString() ,
                                                                       ),
                                                                       23.33
                                                                           .h
@@ -332,8 +332,10 @@ class ChatAvailbilityScreen extends StatelessWidget {
                                     },
                                   );
                                 } else {
-                                  return EmptyList(
-                                    name: 'No Neighbour Exists.',
+                                  return Center(
+                                    child: EmptyList(
+                                      name: 'No Neighbour Exists.',
+                                    ),
                                   );
                                 }
                               } else if (snapshot.hasError) {

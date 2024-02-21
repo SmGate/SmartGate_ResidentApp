@@ -87,14 +87,16 @@ class NoticeBoardScreen extends GetView {
                                   },
                                   itemCount: snapshot.data!.data.length);
                             } else {
-                              return EmptyList(
-                                name: 'No Notices',
+                              return Center(
+                                child: EmptyList(
+                                  name: 'No Notices',
+                                ),
                               );
                             }
                           } else if (snapshot.hasError) {
                             return Icon(Icons.error_outline);
                           } else {
-                            return Loader();
+                            return Center(child: Loader());
                           }
                         }),
                   ),

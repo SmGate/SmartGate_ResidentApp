@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_contact_picker/flutter_native_contact_picker.dart';
@@ -142,10 +144,14 @@ class AddPreApproveEntry extends GetView {
                                     padding:
                                         EdgeInsets.fromLTRB(44.w, 0, 45.w, 0),
                                     child: DropdownSearch<GateKeeper>(
+                                      
                                       dropdownDecoratorProps:
                                           DropDownDecoratorProps(
+
                                               dropdownSearchDecoration:
                                                   InputDecoration(
+                             
+
                                         focusedBorder: UnderlineInputBorder(
                                             borderSide: BorderSide(
                                                 color: primaryColor)),
@@ -153,7 +159,9 @@ class AddPreApproveEntry extends GetView {
                                             borderSide: BorderSide(
                                                 color: HexColor('#E4E4E4'))),
                                         suffixIconColor: primaryColor,
-                                      )),
+                                      ),
+                                    ) ,
+
                                       validator: (value) => value == null
                                           ? 'Select Gatekeeper'
                                           : null,
@@ -171,6 +179,8 @@ class AddPreApproveEntry extends GetView {
                                       itemAsString: (GateKeeper gatekeeper) {
                                         return gatekeeper.gateNo.toString();
                                       },
+
+                                   
                                     ),
                                   ),
                                   MyTextFormField(

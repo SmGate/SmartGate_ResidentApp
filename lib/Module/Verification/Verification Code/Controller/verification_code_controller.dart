@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_null_comparison, body_might_complete_normally_catch_error
+
 import 'dart:convert';
 import 'dart:developer';
 
@@ -88,7 +90,7 @@ class VerificationCodeController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
+   
     super.onInit();
     verificatioCode.value = controller.verificationId.value;
     log(verificatioCode.value.toString());

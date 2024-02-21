@@ -10,7 +10,6 @@ import 'package:userapp/Module/Signup/Resident%20Address%20Detail/Model/block.da
 import 'package:userapp/Module/Signup/Resident%20Address%20Detail/Model/measurement.dart';
 import 'package:userapp/Module/Signup/Resident%20Address%20Detail/Model/phase.dart';
 import 'package:userapp/Module/Signup/Resident%20Address%20Detail/Model/street.dart';
-
 import '../../../../Constants/constants.dart';
 import '../../../../Helpers/Validation Helper/validation_helper.dart';
 import '../../../../Routes/set_routes.dart';

@@ -41,67 +41,71 @@ class AdminReports extends GetView {
                   ),
                   32.h.ph,
                   Expanded(
-                    child: Center(
-                      child: PagedListView(
-                        shrinkWrap: true,
-                        primary: false,
-                        pagingController: controller.pagingController,
-                        addAutomaticKeepAlives: false,
-                        builderDelegate: PagedChildBuilderDelegate(
-                         firstPageProgressIndicatorBuilder: (context){
-                          return Center(child: CircularProgressIndicator(color: primaryColor));
-                         },
-                         newPageProgressIndicatorBuilder:  (context){
-                          return Center(child: CircularProgressIndicator(color: primaryColor));
-                         },
-                          noItemsFoundIndicatorBuilder: (context) {
-                            return EmptyList(
+                    child: PagedListView(
+                      shrinkWrap: true,
+                      primary: false,
+                      pagingController: controller.pagingController,
+                      addAutomaticKeepAlives: false,
+                      builderDelegate: PagedChildBuilderDelegate(
+                       firstPageProgressIndicatorBuilder: (context){
+                        return Center(child: Padding(
+                        padding: const EdgeInsets.only(top: 300),
+                          child: CircularProgressIndicator(color: primaryColor),
+                        ));
+                       },
+                       newPageProgressIndicatorBuilder:  (context){
+                        return Center(child: CircularProgressIndicator(color: primaryColor));
+                       },
+                        noItemsFoundIndicatorBuilder: (context) {
+                          return Padding(
+                             padding: const EdgeInsets.only(top: 300),
+                            child: EmptyList(
                               name: 'No Complains',
-                            );
-                          },
-                          itemBuilder: (context, item, index) {
-                            final Reports reports = item as Reports;
-                      
-                            return GestureDetector(
-                                onTap: () {
-                                  showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) =>
-                                          AlertDialog(
-                                            content: ComplaintDialog(
-                                              userId: reports.userid,
-                                              statusDescription:
-                                                  reports.statusdescription,
-                                              status: reports.status,
-                                              index: index,
-                                              id: reports.id,
-                                              controller: controller,
-                                              title: reports.title,
-                                              description: reports.description,
-                                              updatedAt: reports.updatedAt,
-                                              createdAt: reports.createdAt,
-                                              dialogTitle: 'Complaint',
-                                            ),
-                                          ));
-                                },
-                                child: ComplainCard(
-                                  index: index,
-                                  controller: controller,
-                                  id: reports.id,
-                                  title: reports.title,
-                                  description: reports.description,
-                                  userId: reports.userid,
-                                  subAdminId: reports.subadminid,
-                                  createdAt: reports.createdAt,
-                                  status: reports.status,
-                                  statusDescription: reports.statusdescription,
-                                  updatedAat: reports.updatedAt,
-                                ));
-                          },
-                       
-                        ),
-                        
+                            ),
+                          );
+                        },
+                        itemBuilder: (context, item, index) {
+                          final Reports reports = item as Reports;
+                    
+                          return GestureDetector(
+                              onTap: () {
+                                showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) =>
+                                        AlertDialog(
+                                          content: ComplaintDialog(
+                                            userId: reports.userid,
+                                            statusDescription:
+                                                reports.statusdescription,
+                                            status: reports.status,
+                                            index: index,
+                                            id: reports.id,
+                                            controller: controller,
+                                            title: reports.title,
+                                            description: reports.description,
+                                            updatedAt: reports.updatedAt,
+                                            createdAt: reports.createdAt,
+                                            dialogTitle: 'Complaint',
+                                          ),
+                                        ));
+                              },
+                              child: ComplainCard(
+                                index: index,
+                                controller: controller,
+                                id: reports.id,
+                                title: reports.title,
+                                description: reports.description,
+                                userId: reports.userid,
+                                subAdminId: reports.subadminid,
+                                createdAt: reports.createdAt,
+                                status: reports.status,
+                                statusDescription: reports.statusdescription,
+                                updatedAat: reports.updatedAt,
+                              ));
+                        },
+                     
                       ),
+                      
                     ),
                   ),
                 ],

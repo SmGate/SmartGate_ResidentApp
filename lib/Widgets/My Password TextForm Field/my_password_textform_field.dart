@@ -92,11 +92,7 @@ class MyPasswordTextFormField extends GetView {
                         child: Icon(Icons.visibility_sharp),
                       )
 
-                // Icon(
-                //   obscureText
-                //       ? Icons.visibility
-                //       : Icons.visibility_off,
-                // )
+             
 
                 ),
 
