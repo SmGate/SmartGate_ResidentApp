@@ -1,0 +1,20 @@
+# Flutter/Dart specific files
+.dart_tool/
+.idea/
+.vscode/
+*.iml
+
+# Generated files
+/build/
+/android/build/
+/ios/Flutter/Flutter.framework/
+/ios/Flutter/Generated.xcconfig
+
+# Dependencies
+/android/.gradle/
+/ios/Pods/
+
+# Other generated files and artifacts
+*.apk
+*.ipa
+*.lock
