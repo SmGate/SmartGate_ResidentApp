@@ -58,5 +58,12 @@
 	<false/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Our app requires access to your photo library to allow you to select and upload images for sharing with friends</string>
+	<!-- Add NSAppTransportSecurity key here -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+    
 </dict>
 </plist>
