@@ -144,24 +144,19 @@ class AddPreApproveEntry extends GetView {
                                     padding:
                                         EdgeInsets.fromLTRB(44.w, 0, 45.w, 0),
                                     child: DropdownSearch<GateKeeper>(
-                                      
                                       dropdownDecoratorProps:
                                           DropDownDecoratorProps(
-
-                                              dropdownSearchDecoration:
-                                                  InputDecoration(
-                             
-
-                                        focusedBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: primaryColor)),
-                                        enabledBorder: UnderlineInputBorder(
-                                            borderSide: BorderSide(
-                                                color: HexColor('#E4E4E4'))),
-                                        suffixIconColor: primaryColor,
+                                        dropdownSearchDecoration:
+                                            InputDecoration(
+                                          focusedBorder: UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: primaryColor)),
+                                          enabledBorder: UnderlineInputBorder(
+                                              borderSide: BorderSide(
+                                                  color: HexColor('#E4E4E4'))),
+                                          suffixIconColor: primaryColor,
+                                        ),
                                       ),
-                                    ) ,
-
                                       validator: (value) => value == null
                                           ? 'Select Gatekeeper'
                                           : null,
@@ -179,8 +174,6 @@ class AddPreApproveEntry extends GetView {
                                       itemAsString: (GateKeeper gatekeeper) {
                                         return gatekeeper.gateNo.toString();
                                       },
-
-                                   
                                     ),
                                   ),
                                   MyTextFormField(

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -213,8 +215,7 @@ class EventDialog extends StatelessWidget {
               11.w.pw,
               Text(
                 DateHelper.convertDateFormatToDayMonthYearDateFormat(
-                        startDate!) ??
-                    "",
+                    startDate!),
                 style: GoogleFonts.ubuntu(
                     color: HexColor(
                       '#4D4D4D',
@@ -231,9 +232,7 @@ class EventDialog extends StatelessWidget {
               ),
               11.w.pw,
               Text(
-                DateHelper.convertDateFormatToDayMonthYearDateFormat(
-                        endDate!) ??
-                    "",
+                DateHelper.convertDateFormatToDayMonthYearDateFormat(endDate!),
                 style: GoogleFonts.ubuntu(
                     color: HexColor(
                       '#4D4D4D',
@@ -278,7 +277,7 @@ class EventDialog extends StatelessWidget {
               ),
               11.w.pw,
               Text(
-                DateHelper.formatTimeToAMPM(startTime!) ?? "",
+                DateHelper.formatTimeToAMPM(startTime!),
                 style: GoogleFonts.ubuntu(
                     color: HexColor(
                       '#4D4D4D',
@@ -295,7 +294,7 @@ class EventDialog extends StatelessWidget {
               ),
               11.w.pw,
               Text(
-                DateHelper.formatTimeToAMPM(endTime!) ,
+                DateHelper.formatTimeToAMPM(endTime!),
                 style: GoogleFonts.ubuntu(
                     color: HexColor(
                       '#4D4D4D',
@@ -372,8 +371,8 @@ class EventCard extends StatelessWidget {
     return Padding(
         padding: EdgeInsets.fromLTRB(14.w, 13.h, 18.w, 0),
         child: SizedBox(
-           // height: 96.w,
-           width: 343.w,
+            // height: 96.w,
+            width: 343.w,
             child: Card(
                 elevation: 1,
                 shape: RoundedRectangleBorder(

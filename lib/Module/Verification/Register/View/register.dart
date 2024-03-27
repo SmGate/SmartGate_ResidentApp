@@ -81,13 +81,10 @@ class Register extends StatelessWidget {
                                 fontSize: 14,
                               ),
                               bottomSheetHeight: 500,
-                              // Optional. Country list modal height
-                              //Optional. Sets the border radius for the bottomsheet.
                               borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(12.0),
                                 topRight: Radius.circular(12.0),
                               ),
-                              //Optional. Styles the search field.
                               inputDecoration: InputDecoration(
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(

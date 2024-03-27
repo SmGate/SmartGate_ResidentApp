@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:hexcolor/hexcolor.dart';
 
 class MyStatusWidget extends GetView {
   final String status;
@@ -24,7 +23,7 @@ class MyStatusWidget extends GetView {
           status,
           style: TextStyle(
             fontSize: 10,
-            color: textcolor ?? HexColor('#FFFFFF'),
+            color: textcolor,
             fontWeight: FontWeight.w400,
           ),
         ),

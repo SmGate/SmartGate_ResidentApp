@@ -592,6 +592,8 @@ class HomeScreen extends GetView {
                                     ]),
                               ),
                             ),
+
+                            SizedBox(height: 40,)
                           ],
                         ),
                       );

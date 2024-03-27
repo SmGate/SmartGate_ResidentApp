@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as Http;
 import 'package:image_picker/image_picker.dart';
 import 'package:userapp/Module/Signup/Resident%20Personal%20Detail/Model/resident.dart';
-
 import '../../../../Constants/api_routes.dart';
 import '../../../../Constants/constants.dart';
 import '../../../../Routes/set_routes.dart';
@@ -32,10 +31,10 @@ class ResidentPersonalDetailController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
+   
     super.onInit();
     print("init");
-    //print(user);
+  
   }
 
   getFromGallery(ImageSource source) async {
@@ -47,8 +46,7 @@ class ResidentPersonalDetailController extends GetxController {
 
     if (pickedFile != null) {
       print('file picked: $pickedFile');
-      // img = pickedFile as Image?;
-
+     
       print('Assigning Image file');
       imageFile = File(pickedFile.path);
       update();

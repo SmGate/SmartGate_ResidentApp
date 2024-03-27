@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
@@ -11,7 +13,6 @@ import 'package:userapp/Constants/api_routes.dart';
 import 'package:userapp/Constants/constants.dart';
 import 'package:userapp/Helpers/Date%20Helper/date_helper.dart';
 import 'package:userapp/Widgets/Loader/loader.dart';
-
 import '../../../../Routes/set_routes.dart';
 import '../../../../Widgets/Empty List/empty_list.dart';
 import '../../../../Widgets/My Button/my_button.dart';
@@ -176,24 +177,24 @@ class NeighbourChatScreen extends GetView {
                                     if (index == 0 && data.length == 1) {
                                       newDate =
                                           DateHelper.groupMessageDateAndTime(
-                                                  data![index]['timestamp']
+                                                  data[index]['timestamp']
                                                       .toString())
                                               .toString();
                                     } else if (index == data.length - 1) {
                                       newDate =
                                           DateHelper.groupMessageDateAndTime(
-                                                  data![index]['timestamp']
+                                                  data[index]['timestamp']
                                                       .toString())
                                               .toString();
                                     } else {
                                       final DateTime date =
                                           DateHelper.returnDateAndTimeFormat(
-                                              data![index + 1]['timestamp']
+                                              data[index + 1]['timestamp']
                                                   .toString());
 
                                       final DateTime prevDate =
                                           DateHelper.returnDateAndTimeFormat(
-                                              data![index]['timestamp']
+                                              data[index]['timestamp']
                                                   .toString());
 
                                       isSameDate =
@@ -249,7 +250,7 @@ class NeighbourChatScreen extends GetView {
                                                   children: [
                                                     10.h.ph,
                                                     Text(
-                                                      data![index]['message']
+                                                      data[index]['message']
                                                           .toString(),
                                                       textAlign:
                                                           TextAlign.start,
@@ -267,7 +268,7 @@ class NeighbourChatScreen extends GetView {
                                                     4.h.ph,
                                                     Text(
                                                       DateHelper.messageTime(
-                                                          data![index]
+                                                          data[index]
                                                                   ['timestamp']
                                                               .toString()),
                                                       style: TextStyle(

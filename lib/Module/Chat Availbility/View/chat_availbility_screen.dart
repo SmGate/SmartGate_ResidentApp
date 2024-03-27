@@ -217,8 +217,8 @@ class ChatAvailbilityScreen extends StatelessWidget {
                                                                           text:
                                                                               'Join at'),
                                                                       DialogBoxText(
-                                                                        text: DateHelper.laravelDateToFormattedDate(snapshot.data!.data[index].createdAt.toString()) ??
-                                                                            "",
+                                                                        text: DateHelper.laravelDateToFormattedDate(snapshot.data!.data[index].createdAt.toString()) 
+                                                                          ,
                                                                       ),
                                                                     ],
                                                                   ),

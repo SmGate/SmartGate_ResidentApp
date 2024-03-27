@@ -142,8 +142,7 @@ class ViewFamilyMember extends GetView {
                                                                           text:
                                                                               'MobileNo'),
                                                                       DialogBoxText(
-                                                                        text: snapshot.data!.data[index].mobileno.toString() ??
-                                                                            "",
+                                                                        text: snapshot.data!.data[index].mobileno.toString(),
                                                                       ),
                                                                       23.33
                                                                           .h
@@ -309,8 +308,11 @@ class ViewFamilyMember extends GetView {
                                 } else {
                                   return Column(
                                     children: [
-                                      EmptyList(
-                                        name: 'No Family Member',
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 300),
+                                        child: EmptyList(
+                                          name: 'No Family Member',
+                                        ),
                                       ),
                                       Spacer(),
                                       MyButton(
