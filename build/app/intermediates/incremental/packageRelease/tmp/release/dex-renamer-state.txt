@@ -1,4 +1,0 @@
-#Tue Mar 26 12:14:52 PKT 2024
-base.0=/Users/tms/Documents/smart_gate_projects/GITHUB 2K24/SmartGate_ResidentApp/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
